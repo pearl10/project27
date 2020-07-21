@@ -2,7 +2,7 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
-const Body = Matter.Body;
+
 const Constraint=Matter.Constraint;
 var roof;
 var rope,rope2,rope3,rope4,rope5;
@@ -23,11 +23,11 @@ function setup() {
 
 
 	Engine.run(engine);
-  ball1=new Ball(260,50);
-  ball2=new Ball(320,50);
-  ball3=new Ball(380,50);
-  ball4=new Ball(440,50);
-  ball5=new Ball(500,50);
+  ball1=new Ball(260,400);
+  ball2=new Ball(320,400);
+  ball3=new Ball(380,400);
+  ball4=new Ball(440,400);
+  ball5=new Ball(500,400);
   roof=new Roof (400,200,400,20);
   rope=new Rope(ball1.body,roof.body,-120,0)
   rope2=new Rope(ball2.body,roof.body,-60,0)
@@ -59,7 +59,7 @@ function draw() {
 function keyPressed(){
 	if(keyCode===UP_ARROW){
 	
-	Matter.Body.applyForce(ball1.body,ball1.body.position,{x:110,y:-110});
+	Matter.Body.applyForce(ball1.body,ball1.body.position,{x:110,y:-200});
 	
 	
 	}
